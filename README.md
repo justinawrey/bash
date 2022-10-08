@@ -40,3 +40,8 @@ import { bash } from "https://deno.land/x/bash/mod.ts";
 const result = await bash("echo 'hello world'", { stripTrailingNewline: true });
 console.log(result); // hello world\n
 ```
+
+## Required permissions
+
+Using `bash` requires the `--allow-run` permission. This is because `bash` uses
+`Deno.run` to execute the underlying command.

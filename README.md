@@ -1,5 +1,6 @@
 # bash :boxing_glove:
 
+![deno doc](https://doc.deno.land/badge.svg)
 ![deno module](https://shield.deno.dev/x/bash)
 ![release](https://github.com/justinawrey/bash/actions/workflows/release.yml/badge.svg)
 

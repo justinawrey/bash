@@ -1,4 +1,6 @@
-import { bold } from "https://deno.land/std@0.159.0/fmt/colors.ts";
+function stripTrailingNewline(input: string): string {
+  return input.replace(/\n$/, "");
+}
 
 export class BashError extends Error {}
 
@@ -27,16 +29,12 @@ export async function bash(
   // Success!
   if (status.code === 0) {
     const result = new TextDecoder().decode(stdout);
-    if (options.stripTrailingNewline) {
-      return result.replace(/\n$/, "");
-    }
-
-    return result;
+    return options.stripTrailingNewline ? stripTrailingNewline(result) : result;
   }
 
   // Failure!
+  const error = new TextDecoder().decode(stderr);
   throw new BashError(
-    `bash invocation ${bold(`'${cmd}'`)} failed with error:\n\n` +
-      new TextDecoder().decode(stderr),
+    options.stripTrailingNewline ? stripTrailingNewline(error) : error,
   );
 }

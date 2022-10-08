@@ -1,5 +1,8 @@
 # bash :boxing_glove:
 
+![deno module](https://shield.deno.dev/x/bash)
+![release](https://github.com/justinawrey/bash/actions/workflows/release.yml/badge.svg)
+
 Ergonomically run `bash` commands in Deno.
 
 ## Usage

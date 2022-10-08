@@ -1,6 +1,6 @@
 # bash :boxing_glove:
 
-[![deno module](https://shield.deno.dev/x/bash)](https://deno.land/x/fsrouter)
+[![deno module](https://shield.deno.dev/x/bash)](https://deno.land/x/bash)
 [![release](https://github.com/justinawrey/bash/actions/workflows/release.yml/badge.svg)](https://github.com/justinawrey/bash/actions/workflows/release.yml)
 
 Ergonomically run `bash` commands in Deno.
